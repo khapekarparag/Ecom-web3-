@@ -1,11 +1,13 @@
 
 import React from 'react'
-import Productss from './components/Productss'
+import Products from './components/Products'
+import Navbar from './components/Navbar'
 
 export default function App() {
   return (
     <div>
-        <Productss/>
+        <Navbar/>
+        <Products/>
     </div>
   )
 }

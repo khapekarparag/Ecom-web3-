@@ -1,7 +1,34 @@
 {
-    "product":[
-        {
-            
-        }
-    ]
+  "product": [
+    {
+      "id": "a791"
+    },
+    {
+      "id": "e260",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRgni6GyE5jHIxdFUr8syzYlHAyftFYzzbL2ex9ic3vxC-T9B5X69NXJVuYHmgA7DrZhnCUd6_bbhNT201caUfSne-zSoW0Ve-yqSikIDDp1GEwLkc4pZQE",
+      "name": "Linen Shirt",
+      "category": "mens",
+      "discription": "achhi mAST CHIJ HAI",
+      "price": "2000",
+      "rating": "5"
+    },
+    {
+      "id": "3c85",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQowEYAgTTVl0x2gfLWNDzNqnkfVfyLv-_BToyzg_A2T4HDmS7ozmxdMecCbPHBn_pGYKjmiu4QCzr4e0bKbZuZVJjfb_2xBVvpm6Hp8IS0pcqRYQpxzKoU",
+      "name": "magestic maen Shirt",
+      "category": "mens",
+      "discription": "mAST CHIJ HAI",
+      "price": "15000",
+      "rating": "4"
+    },
+    {
+      "id": "0fc7",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSY5ARWuPIP_0SLeVPFlYlyAuvCyN_6jmyYQQ5cw92BiTZjf0PkgoXXhb9owKx37J0cZfvIVDkY6KJZDF6pT4vBnfmAKRk596PEHocFdZ2E",
+      "name": "harbour cream shirt",
+      "category": "mens",
+      "discription": " acchi mAST CHIJ HAI",
+      "price": "3000",
+      "rating": "5"
+    }
+  ]
 }
