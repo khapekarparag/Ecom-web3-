@@ -30,5 +30,32 @@
       "price": "3000",
       "rating": "5"
     }
+  ],
+  "login": [
+    {},
+    {
+      "id": "5f25",
+      "firstName": "Parag",
+      "lastName": "Khapekar",
+      "userName": "khapekarparag",
+      "password": "Parag@14",
+      "ConPassword": "Parag@14"
+    },
+    {
+      "id": "e262",
+      "firstName": "harshal",
+      "lastName": "Khapekar",
+      "userName": "khapekarharshal",
+      "password": "Harshal@14",
+      "ConPassword": "Harshal@14"
+    },
+    {
+      "id": "81af",
+      "firstName": "Ganesh",
+      "lastName": "Shahu",
+      "userName": "shahuganesh",
+      "password": "ganesh",
+      "ConPassword": "ganesh"
+    }
   ]
 }

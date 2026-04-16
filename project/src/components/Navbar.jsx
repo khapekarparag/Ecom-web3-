@@ -1,29 +1,43 @@
 
 import React, { useState } from "react";
 import "../style/navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  let [login, setLogin] = useState(false)
+
+
+
 
   return (
     <nav className="navbar">
       {/* Logo */}
-      <div className="logo">iTpreneur</div>
+      <div className="logo">MINI STORE</div>
 
      
 
       {/* Links */}
-      <ul className="nav-links active">
-        <li><a href="/">Home</a></li>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+      <div className="nav-links">
+        <Link>Home</Link>
+        <Link>Products</Link>
+        <Link>About</Link>
+        <Link>Contact</Link>
+        <Link to="/addProduct">ADD Product</Link>
+      </div>
+
 
       {/* Right Section */}
       <div className="nav-right">
         <input type="text" placeholder="Search..." />
-        <button className="login-btn">Login</button>
+        <button className="search">Search</button>
       </div>
+
+      <div id="log-register">
+            {/* <Link>Register</Link> */}
+            <Link to="/login" >Login</Link>
+      </div>
+
     </nav>
   );
 }

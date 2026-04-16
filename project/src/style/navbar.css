@@ -24,18 +24,17 @@
 
 .nav-links {
   display: flex;
-  list-style: none;
   gap: 25px;
 }
 
-.nav-links li a {
+.nav-links > a {
   text-decoration: none;
   color: white;
   font-size: 16px;
   transition: 0.3s;
 }
 
-.nav-links li a:hover {
+.nav-links > a:hover {
   color: #38bdf8;
 }
 
@@ -43,25 +42,31 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  /* border: 2px solid red; */
+  width: 40%;
+  height: 40px;
 }
 
-.nav-right input {
+.nav-right > input {
   padding: 6px 10px;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 10px;
   border: none;
+  height: 100%;
 }
 
-.login-btn {
+.search {
   padding: 6px 12px;
   border: none;
   background: #38bdf8;
   color: black;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
+  height: 100%;
 }
 
-.login-btn:hover {
+.search:hover {
   background: #0ea5e9;
 }
 
@@ -71,4 +76,32 @@
   font-size: 22px;
   cursor: pointer;
 }
+
+
+
+/* Container */
+#log-register {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end; /* right side */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Link */
+#log-register a {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* /* Hover  */
+#log-register a:hover {
+  background: #667eea;
+  color: #fff;
+}
+
 

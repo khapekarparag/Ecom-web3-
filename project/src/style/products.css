@@ -1,0 +1,72 @@
+/* Center the form */
+#form-grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background: linear-gradient(135deg, #66b5ea, #bbdcef);
+  font-family: Arial, sans-serif;
+}
+
+/* Form container */
+form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Labels */
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Inputs & Select */
+form input,
+form select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+form input:focus,
+form select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Submit button */
+form input[type="submit"] {
+  margin-top: 15px;
+  background: #3fbadc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+form input[type="submit"]:hover {
+  background: #087697;
+  transform: scale(1.03);
+}
+
+/* Spacing fix */
+form br {
+  display: none;
+}
+
+form label {
+  margin-bottom: 15px;
+}

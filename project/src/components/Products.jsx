@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../style/products.css"
 
 export default function Products() {
     let prodData = {
@@ -34,7 +35,7 @@ export default function Products() {
     }
 
   return (
-    <div>
+    <div id='form-grp'>
         <form action="" method="post" onSubmit={handleSubmit}>
             <label htmlFor="">Image : <input type="url" name="image" id="" onChange={handleChange} /></label><br /><br />
             <label htmlFor="">Name : <input type="text" name="name" id="" onChange={handleChange}/></label><br /><br />
