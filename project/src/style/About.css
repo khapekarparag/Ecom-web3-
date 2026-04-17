@@ -64,9 +64,3 @@
   color: white;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 28px;
-  }
-}
