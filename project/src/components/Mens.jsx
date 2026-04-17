@@ -2,11 +2,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CartProdValueContext } from '../context/CartProdValueContextProvider'
 import { AddProdInCartContext } from '../context/AddProdInCartContextProvider'
+import { ThemeContext } from '../context/ThemeContextProvider'
 
 export default function Mens() {
           let [prod, setProd ] = useState([]) 
             let {cartval, setCartval} = useContext(CartProdValueContext)
               let {cartProd, setCartProd} = useContext(AddProdInCartContext)
+              let {theme, setTheme} = useContext(ThemeContext)
 
 
     function handleCart(product){
@@ -29,14 +31,14 @@ export default function Mens() {
 
   return (
     <div>
-          <div id='container'>
+          <div id='container' style={{backgroundColor : theme ? '#1f1e1e' : 'white'}} >
             {
                 prod.map((el,i)=>{
-                    return <div key={i}>
+                    return <div key={i} style={{backgroundColor : theme ? '#3a3838' : 'white'}}>
                         <img src={el.image} alt=""/>
                         <h2>{el.name}</h2>
                         <h3>MRP :{el.price}Rs</h3>
-                        <h3>{el.category}</h3>
+                        <h3 style={{color : theme ? '#b6abab' : '#3a3838'}}>{el.category}</h3>
                         <h4>{el.rating}</h4>
                         <button value={el.id} onClick={()=>handleCart(el)}>ADD TO CART</button>
                     </div>

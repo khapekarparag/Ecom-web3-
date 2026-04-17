@@ -8,9 +8,10 @@
 #caroseal {
   position: relative;
   width: 100%;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   overflow: hidden;
-  border-radius: 16px;
+  height: 400px;
+  /* border-radius: 16px; */
   /* border: 2px solid red; */
 }
 
@@ -65,11 +66,12 @@
 
 /* HERO */
 .hero {
-  background: url("https://via.placeholder.com/1200x400") no-repeat center;
+  /* background: url("https://via.placeholder.com/1200x400") no-repeat center; */
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .hero button {
@@ -83,14 +85,15 @@
 
 /* CATEGORY */
 .categories {
-  padding: 40px;
+  padding: 50px;
   text-align: center;
 }
 
 .category-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  padding-top: 30px;
 }
 
 .category-card {
@@ -110,36 +113,6 @@
   color: #fff;
 }
 
-/* PRODUCTS */
-.products {
-  padding: 40px;
-  text-align: center;
-}
-
-.product-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  width: 200px;
-}
-
-.product-card img {
-  width: 100%;
-}
-
-.product-card button {
-  margin-top: 10px;
-  padding: 8px;
-  background: black;
-  color: white;
-  border: none;
-}
 
 /* OFFER */
 .offer {

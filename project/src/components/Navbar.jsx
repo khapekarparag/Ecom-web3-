@@ -2,21 +2,25 @@
 import React, { useContext, useState } from "react";
 import "../style/navbar.css";
 import { Link } from "react-router-dom";
+
 import { AdminContext } from "../context/AdminContextProvider";
 import { UserLoginContext } from "../context/UserLoginContextProvider";
-
 import { CartProdValueContext } from "../context/CartProdValueContextProvider";
+import { SearchContext } from "../context/SearchContextProvider";
+import { ThemeContext } from "../context/ThemeContextProvider";
 
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
+
+
 export default function Navbar() {
   let {user, setUser} = useContext(UserLoginContext)
   let {admin, setAdmin} = useContext(AdminContext)
-
   let {cartval, setCartval} = useContext(CartProdValueContext)
-  let [search, setSearch] = useState("")
+  let {search, setSearch} = useContext(SearchContext)
+  let {theme, setTheme} = useContext(ThemeContext)
 
 
 function handlelogout(){
@@ -27,11 +31,13 @@ function handleSearch(e){
     let value = e.target.value
     setSearch(value)
     console.log(search);
-    
-
 }
 function handleSubmit(){
 
+}
+
+function handleTheme(){
+    setTheme(theme ? false : true)
 }
 
 
@@ -62,6 +68,7 @@ function handleSubmit(){
             {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" >Login</Link>}
             {user ? <Link to="/cart">{cartval}<FontAwesomeIcon icon={faCartShopping}/>Cart</Link> : <button>Cart</button> }
             {/* <button disabled={user ? false : true} onClick={handlelogout}>Logout</button> */}
+            <button onClick={handleTheme}>{theme ? "Bright" : "Dark"}</button>
       </div>
     </nav>
     {

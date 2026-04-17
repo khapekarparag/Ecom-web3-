@@ -1,9 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { AdminContext } from '../context/AdminContextProvider'
+import { ThemeContext } from '../context/ThemeContextProvider'
 
 
 export default function Admin() {
     let {admin, setAdmin} = useContext(AdminContext)
+    let {theme, setTheme} = useContext(ThemeContext)
+
+
      let logObj ={
             username:"",
             password : ""

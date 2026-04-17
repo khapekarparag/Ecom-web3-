@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../style/Home.css";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContextProvider";
 
 export default function Home() {
     let [count, setcount] = useState(0)
+    let {theme, setTheme} = useContext(ThemeContext)
     let imgArr = [
         "https://img.freepik.com/free-photo/fashion-collection-design-shopping-graphic-words_53876-144405.jpg?semt=ais_incoming&w=740&q=80",
         "https://cdn.dribbble.com/userupload/14441108/file/original-9460586cd3dbe9f3c5e4f9de2d494ab4.jpg?resize=1504x1128&vertical=center",
@@ -54,24 +56,24 @@ export default function Home() {
   return (
 
     <>
-        <div id="caroseal">
+        <div id="caroseal" style={{backgroundColor : theme ? '#1f1e1e' : 'white'}} >
           <button onClick={handlePrev}>Prev</button>
           <img src={imgArr[count]} alt=""/>
           <button onClick={handleNext}>Next</button>
         </div>
 
 
-    <div className="home">
+    <div className="home" style={{backgroundColor : theme ? '#1f1e1e' : 'white'}}>
       {/* HERO SECTION */}
       <section className="hero">
-        <h1 style={{color : "black"}}>Big Fashion Sale </h1>
-        <p style={{color : "black"}}>Up to 50% off on all clothing</p>
+        <h1 style={{color : theme ? 'white' : '#1f1e1e'}}>Big Fashion Sale </h1>
+        <p style={{color : theme ? 'white' : '#1f1e1e'}}>Up to 50% off on all clothing</p>
         <button>Shop Now</button>
       </section>
 
       {/* CATEGORY SECTION */}
       <section className="categories">
-        <h2>Shop by Category</h2>
+        <h2 style={{color : theme ? 'white' : '#1f1e1e'}}>Shop by Category</h2>
         <div className="category-container">
           <Link to="/mens" className="category-card">Men</Link>
             <Link to="/womens" className="category-card">Women</Link>
