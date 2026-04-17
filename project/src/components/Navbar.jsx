@@ -1,29 +1,39 @@
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../style/navbar.css";
 import { Link } from "react-router-dom";
+import { AdminContext } from "../context/AdminContextProvider";
+import { UserLoginContext } from "../context/UserLoginContextProvider";
+import Login from "./Login";
+
+
 
 export default function Navbar() {
+  let {user, setUser} = useContext(UserLoginContext)
+  let {admin, setAdmin} = useContext(AdminContext)
 
-  let [login, setLogin] = useState(false)
 
+function handleLogin(){
+      // setUser(true)
+}
 
-
+function handlelogout(){
+      setUser(false)
+}
 
   return (
+    <>
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">MINI STORE</div>
 
      
-
       {/* Links */}
       <div className="nav-links">
         <Link>Home</Link>
-        <Link>Products</Link>
+        <Link to="/showProduct">Products</Link>
         <Link>About</Link>
         <Link>Contact</Link>
-        <Link to="/addProduct">ADD Product</Link>
       </div>
 
 
@@ -35,9 +45,26 @@ export default function Navbar() {
 
       <div id="log-register">
             {/* <Link>Register</Link> */}
-            <Link to="/login" >Login</Link>
+            {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" onClick={handleLogin} >login</Link>}
+            <Link to="/cart">Cart</Link>
+            {/* <button disabled={user ? false : true} onClick={handlelogout}>Logout</button> */}
       </div>
+    </nav>
+    {
+      admin ? <nav className="navbar">
+      <div className="nav-links"> 
+            <Link to="/addProduct">ADD Product</Link>
+            <Link to={"/adminShowProduct"}>Show All</Link>
+      </div> 
+            <button onClick={()=>{setAdmin(false)}}>Admin-Logout</button>
 
     </nav>
+    :
+    null
+    }
+    
+    </>
+    
+    
   );
 }

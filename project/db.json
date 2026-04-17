@@ -1,9 +1,6 @@
 {
   "product": [
     {
-      "id": "a791"
-    },
-    {
       "id": "e260",
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRgni6GyE5jHIxdFUr8syzYlHAyftFYzzbL2ex9ic3vxC-T9B5X69NXJVuYHmgA7DrZhnCUd6_bbhNT201caUfSne-zSoW0Ve-yqSikIDDp1GEwLkc4pZQE",
       "name": "Linen Shirt",
@@ -29,10 +26,18 @@
       "discription": " acchi mAST CHIJ HAI",
       "price": "3000",
       "rating": "5"
+    },
+    {
+      "id": "9eaf",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRKmxW8JsGVKoY8lCBC7LHrLiJ3ibhwc6Jt0mgY0CewwdkMPdy5ZELrbu0S66jGrypaaT3XG0iW926mBHGWGUK6F1TU-NKdrpDsloKWL8w",
+      "name": "Alaya Womens Skirt",
+      "category": "womens",
+      "discription": "Branded with full comfort",
+      "price": "3000",
+      "rating": "5"
     }
   ],
   "login": [
-    {},
     {
       "id": "5f25",
       "firstName": "Parag",
@@ -56,6 +61,15 @@
       "userName": "shahuganesh",
       "password": "ganesh",
       "ConPassword": "ganesh"
+    }
+  ],
+  "admin": [
+    {
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "userName": "Admin",
+      "password": "Admin@123",
+      "ConPassword": "Admin@123"
     }
   ]
 }
