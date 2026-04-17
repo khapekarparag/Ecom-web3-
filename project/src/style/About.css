@@ -1,0 +1,72 @@
+.about {
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.about-hero {
+  background: linear-gradient(to right, #111827, #374151);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+}
+
+.about-hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* INTRO */
+.about-intro {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-intro h2 {
+  margin-bottom: 15px;
+}
+
+/* FEATURES */
+.about-features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9fafb;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TEAM / VISION */
+.about-team {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f3f4f6;
+}
+
+/* FOOTER */
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+}

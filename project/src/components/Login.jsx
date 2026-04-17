@@ -42,7 +42,7 @@ let [log, setLogin] = useState(logObj)
             <input type="submit" value="Login"/>
                 <p>if not registerd </p>
                 <Link to="/register">Register</Link>
-                <Link to="/admin">Admin</Link>
+                <Link to="/admin">Admin-Login</Link>
         </form>
     </div>
   )

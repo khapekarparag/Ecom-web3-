@@ -7,6 +7,11 @@ import Showproducts from './Showproducts'
 import Admin from './Admin'
 import Cart from './Cart'
 import Home from './Home'
+import About from './About'
+import ShowAdminProducts from './ShowAdminProducts'
+import Womens from './Womens'
+import Mens from './Mens'
+import Kids from './Kids'
 
 export default function AllRoutes() {
   return (
@@ -18,6 +23,11 @@ export default function AllRoutes() {
         <Route path='/showProduct' element={<Showproducts/>}/>
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/showadminprod' element={<ShowAdminProducts/>}/>
+        <Route path='/womens' element={<Womens/>}/>
+        <Route path='/mens' element={<Mens/>}/>
+        <Route path='/kids' element={<Kids/>}/>
     </Routes>
   )
 }

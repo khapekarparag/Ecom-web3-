@@ -33,15 +33,13 @@
 #caroseal button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
+  /* transform: translateY(-50%); */
+  background: grey;
   border: none;
   color: white;
   font-size: 18px;
   padding: 12px 16px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 2;
+  z-index: 1;
 
 }
 
@@ -96,10 +94,20 @@
 }
 
 .category-card {
-  padding: 30px;
+  padding: 10px;
   background: #f4f4f4;
   width: 120px;
   cursor: pointer;
+  text-decoration: none;
+  color:black;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.category-card:hover {
+    background: #667eea;
+  color: #fff;
 }
 
 /* PRODUCTS */

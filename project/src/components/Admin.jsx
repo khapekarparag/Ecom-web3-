@@ -61,6 +61,8 @@ export default function Admin() {
             <label htmlFor="">Username  :- <input type="text" name="username" id="" onChange={handleChange} /></label><br /><br />
             <label htmlFor="">Password :- <input type="password" name="password" id="" onChange={handleChange} /></label><br /><br />
             <input  type="submit" value="Admin Login"/>
+
+            <h1>For authorized Person</h1>
         </form>
     </div>
   )

@@ -16,14 +16,24 @@ export default function Navbar() {
   let {admin, setAdmin} = useContext(AdminContext)
 
   let {cartval, setCartval} = useContext(CartProdValueContext)
+  let [search, setSearch] = useState("")
 
-function handleLogin(){
-      // setUser(true)
-}
 
 function handlelogout(){
       setUser(false)
 }
+
+function handleSearch(e){
+    let value = e.target.value
+    setSearch(value)
+    console.log(search);
+    
+
+}
+function handleSubmit(){
+
+}
+
 
   return (
     <>
@@ -33,21 +43,23 @@ function handlelogout(){
 
     {/* Right Section */}
       <div className="nav-right">
-        <input type="text" placeholder="Search..." />
-        <button className="search">Search</button>
+        {/* <form action="" method="post" id="searchForm"> */}
+                <input id="searchInput" onChange={handleSearch} type="text" placeholder="Search..." />
+                <button className="search" onClick={handleSubmit}>Search</button>
+        {/* </form>  */}
       </div>
      
       {/* Links */}
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/showProduct">Products</Link>
-        <Link>About</Link>
+        <Link to='/about'>About</Link>
         <Link>Contact</Link>
       </div>
 
       <div id="log-register">
             {/* <Link>Register</Link> */}
-            {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" onClick={handleLogin} >Login</Link>}
+            {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" >Login</Link>}
             {user ? <Link to="/cart">{cartval}<FontAwesomeIcon icon={faCartShopping}/>Cart</Link> : <button>Cart</button> }
             {/* <button disabled={user ? false : true} onClick={handlelogout}>Logout</button> */}
       </div>
@@ -56,7 +68,7 @@ function handlelogout(){
       admin ? <nav className="navbar">
       <div className="nav-links"> 
             <Link to="/addProduct">ADD Product</Link>
-            <Link to="/adminShowProduct">Show All</Link>
+            <Link to="/showadminprod">Show All</Link>
       </div> 
             <button onClick={()=>{setAdmin(false)}}>Admin-Logout</button>
     </nav>:null

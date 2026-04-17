@@ -2,19 +2,32 @@
 #form-grp {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 800px;
-  background: linear-gradient(135deg, #66b5ea, #bbdcef);
+  /* align-items: center; */
+  height: 700px;
+  background: linear-gradient(135deg, #cedce6, #bbdcef);
   font-family: Arial, sans-serif;
+  /* border: 2px solid red; */
+}
+
+#form-grp > form > h1{
+  margin-top: 60px;
+  margin-left: 50px;
 }
 
 /* Form container */
 form {
   background: #fff;
-  padding: 30px 40px;
+  padding: 25px 40px;
   border-radius: 12px;
-  width: 350px;
+  width: 400px;
+  /* height: auto; */
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  height: 580px;
+  margin-top: 30px;
+  /* border: 2px solid rebeccapurple;
+  display: block;
+  justify-content: space-evenly;
+  align-content: center; */
 }
 
 /* Labels */
@@ -30,7 +43,7 @@ form input,
 form select {
   width: 100%;
   padding: 8px 10px;
-  margin-top: 5px;
+  margin-top: 15px;
   border-radius: 6px;
   border: 1px solid #ccc;
   outline: none;
@@ -69,4 +82,39 @@ form br {
 
 form label {
   margin-bottom: 15px;
+}
+
+/* Paragraph */
+#login-form p {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #6b7280; /* soft gray */
+  /* text-align: center; */
+}
+
+/* Links container spacing */
+#login-form a {
+  /* display: inline-block; */
+  margin: 8px 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #2563eb; /* modern blue */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+#login-form a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Optional: make Admin different */
+#login-form a:last-child {
+  color: #111827; /* darker */
+  padding-left: 50px;
+}
+
+#login-form a:last-child:hover {
+  color: #000;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../style/Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     let [count, setcount] = useState(0)
@@ -63,7 +64,7 @@ export default function Home() {
     <div className="home">
       {/* HERO SECTION */}
       <section className="hero">
-        <h1 style={{color : "black"}}>Big Fashion Sale 🔥</h1>
+        <h1 style={{color : "black"}}>Big Fashion Sale </h1>
         <p style={{color : "black"}}>Up to 50% off on all clothing</p>
         <button>Shop Now</button>
       </section>
@@ -72,16 +73,16 @@ export default function Home() {
       <section className="categories">
         <h2>Shop by Category</h2>
         <div className="category-container">
-          <div className="category-card">Men</div>
-          <div className="category-card">Women</div>
-          <div className="category-card">Kids</div>
+          <Link to="/mens" className="category-card">Men</Link>
+            <Link to="/womens" className="category-card">Women</Link>
+            <Link to="/kids" className="category-card">Kids</Link>
         </div>
       </section>
 
     
       {/* OFFER SECTION */}
       <section className="offer">
-        <h2>Special Offer 🎉</h2>
+        <h2>Special Offer</h2>
         <p>Buy 2 Get 1 Free on selected items</p>
       </section>
 
