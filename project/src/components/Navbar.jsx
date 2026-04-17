@@ -4,14 +4,18 @@ import "../style/navbar.css";
 import { Link } from "react-router-dom";
 import { AdminContext } from "../context/AdminContextProvider";
 import { UserLoginContext } from "../context/UserLoginContextProvider";
-import Login from "./Login";
+
+import { CartProdValueContext } from "../context/CartProdValueContextProvider";
 
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
   let {user, setUser} = useContext(UserLoginContext)
   let {admin, setAdmin} = useContext(AdminContext)
 
+  let {cartval, setCartval} = useContext(CartProdValueContext)
 
 function handleLogin(){
       // setUser(true)
@@ -27,26 +31,24 @@ function handlelogout(){
       {/* Logo */}
       <div className="logo">MINI STORE</div>
 
+    {/* Right Section */}
+      <div className="nav-right">
+        <input type="text" placeholder="Search..." />
+        <button className="search">Search</button>
+      </div>
      
       {/* Links */}
       <div className="nav-links">
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/showProduct">Products</Link>
         <Link>About</Link>
         <Link>Contact</Link>
       </div>
 
-
-      {/* Right Section */}
-      <div className="nav-right">
-        <input type="text" placeholder="Search..." />
-        <button className="search">Search</button>
-      </div>
-
       <div id="log-register">
             {/* <Link>Register</Link> */}
-            {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" onClick={handleLogin} >login</Link>}
-            <Link to="/cart">Cart</Link>
+            {user ? <button onClick={handlelogout}>Logout</button> : <Link to="/login" onClick={handleLogin} >Login</Link>}
+            {user ? <Link to="/cart">{cartval}<FontAwesomeIcon icon={faCartShopping}/>Cart</Link> : <button>Cart</button> }
             {/* <button disabled={user ? false : true} onClick={handlelogout}>Logout</button> */}
       </div>
     </nav>
@@ -54,17 +56,11 @@ function handlelogout(){
       admin ? <nav className="navbar">
       <div className="nav-links"> 
             <Link to="/addProduct">ADD Product</Link>
-            <Link to={"/adminShowProduct"}>Show All</Link>
+            <Link to="/adminShowProduct">Show All</Link>
       </div> 
             <button onClick={()=>{setAdmin(false)}}>Admin-Logout</button>
-
-    </nav>
-    :
-    null
+    </nav>:null
     }
-    
-    </>
-    
-    
+    </>   
   );
 }

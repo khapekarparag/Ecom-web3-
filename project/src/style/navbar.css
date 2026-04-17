@@ -89,7 +89,7 @@
 }
 
 /* Link */
-#log-register a {
+#log-register > a,button {
   text-decoration: none;
   color: #667eea;
   font-weight: 600;
@@ -99,7 +99,7 @@
 }
 
 /* /* Hover  */
-#log-register a:hover {
+#log-register > a,button:hover {
   background: #667eea;
   color: #fff;
 }
