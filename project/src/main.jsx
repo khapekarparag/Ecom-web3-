@@ -17,9 +17,11 @@ createRoot(document.getElementById('root')).render(
                 <AddProdInCartContextProvider>
                     <SearchContextProvider>
                         <ThemeContextProvider>
-                            <BrowserRouter>
-                                <App/>
-                            </BrowserRouter>
+                            
+                                <BrowserRouter>
+                                    <App/>
+                                </BrowserRouter>
+                            
                         </ThemeContextProvider>
                     </SearchContextProvider>
                 </AddProdInCartContextProvider>

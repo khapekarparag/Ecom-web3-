@@ -7,7 +7,7 @@ import { AddProdInCartContext } from '../context/AddProdInCartContextProvider'
 export default function Cart() {
     let {cartval, setCartval} = useContext(CartProdValueContext)
     let {cartProd, setCartProd} = useContext(AddProdInCartContext)
-    let {count, IncCount} = useState(0)
+    // let {count, IncCount} = useState(0)
 
 
 
@@ -32,7 +32,7 @@ export default function Cart() {
                         <td>{el.name}</td>
                         <td>{el.price}Rs</td>
                         <td>{el.category}</td>
-                        <td>{count}</td>
+                        {/* <td>{val}</td> */}
                     </tr>}
             })
         }

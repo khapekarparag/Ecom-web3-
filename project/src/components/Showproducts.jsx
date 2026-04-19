@@ -18,7 +18,6 @@ export default function Showproducts() {
 
 
 
-
     async function handlebySearch(){
         console.log(search);
         
@@ -41,7 +40,18 @@ export default function Showproducts() {
     },[])
 
     function handleCart(product){
-            setCartProd((prev)=>[...prev,product])
+        let exist = false
+            for(let i=0;i<=cartProd.length-1;i++){
+                if(cartProd[i].id == product.id ){
+                    exist = true
+                    break
+                }
+            }
+            if(!exist){
+                setCartProd((prev)=>
+                [...prev,product])
+
+            }
             setCartval(function(prev){
                 return prev+1
             })
