@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { UpdateProdContext } from '../context/UpdateProdContextProvider'
+import { useNavigate } from 'react-router-dom'
 
 export default function ShowAdminProducts() {
+    let navigate = useNavigate()
+        let {updateProd, setUpdateProd} = useContext(UpdateProdContext)
         let [prod, setProd ] = useState([]) 
     
     async function handleShow(){
@@ -26,9 +30,22 @@ export default function ShowAdminProducts() {
        setProd(actualData)
     }
 
-    async function handleUpdate(product) {
-        
-        
+    async function handleUpdate(e){
+        let value = e.target.value
+        let data = await fetch(`http://localhost:3000/product/${value}`)
+        let actualData = await data.json()
+        setUpdateProd(actualData)
+        navigate("/update")
+    }
+
+    async function handleDelete(e) {
+        let val = e.target.value
+        await fetch(`http://localhost:3000/product/${val}`,{
+            method : "DELETE"
+        })
+        setProd(prod.filter((el)=>{
+           return el.id != val
+        }))
     }
 
 
@@ -55,9 +72,9 @@ export default function ShowAdminProducts() {
                         <h3>MRP :{el.price}Rs</h3>
                         <h3>{el.category}</h3>
                         <h4>{el.rating}</h4>
-                        <button value={el.id} onClick={()=>handleUpdate(el)}>UPDATE</button>
+                        <button value={el.id} onClick={handleUpdate}>UPDATE</button>
                         <span> ||||||||||  </span>
-                        <button value={el.id}>DELETE</button>
+                        <button value={el.id} onClick={handleDelete}>DELETE</button>
                     </div>
                 })
             }

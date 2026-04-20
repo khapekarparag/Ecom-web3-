@@ -9,6 +9,7 @@ import CartProdValueContextProvider from './context/CartProdValueContextProvider
 import AddProdInCartContextProvider from './context/AddProdInCartContextProvider.jsx'
 import SearchContextProvider from './context/SearchContextProvider.jsx'
 import ThemeContextProvider from './context/ThemeContextProvider.jsx'
+import UpdateProdContextProvider from './context/UpdateProdContextProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
     <AdminContextProvider>
@@ -17,11 +18,11 @@ createRoot(document.getElementById('root')).render(
                 <AddProdInCartContextProvider>
                     <SearchContextProvider>
                         <ThemeContextProvider>
-                            
-                                <BrowserRouter>
+                            <UpdateProdContextProvider>
+                                 <BrowserRouter>
                                     <App/>
                                 </BrowserRouter>
-                            
+                            </UpdateProdContextProvider>
                         </ThemeContextProvider>
                     </SearchContextProvider>
                 </AddProdInCartContextProvider>

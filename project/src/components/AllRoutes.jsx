@@ -12,6 +12,7 @@ import ShowAdminProducts from './ShowAdminProducts'
 import Womens from './Womens'
 import Mens from './Mens'
 import Kids from './Kids'
+import UpdateProduct from './UpdateProduct'
 
 export default function AllRoutes() {
   return (
@@ -28,6 +29,7 @@ export default function AllRoutes() {
         <Route path='/womens' element={<Womens/>}/>
         <Route path='/mens' element={<Mens/>}/>
         <Route path='/kids' element={<Kids/>}/>
+        <Route path='/update' element={<UpdateProduct/>}/>
     </Routes>
   )
 }
