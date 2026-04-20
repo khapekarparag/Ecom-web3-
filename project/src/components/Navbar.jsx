@@ -60,7 +60,7 @@ function handleTheme(){
         <Link to="/">Home</Link>
         <Link to="/showProduct">Products</Link>
         <Link to='/about'>About</Link>
-        <Link>Contact</Link>
+        <Link to='/contact'>Contact</Link>
       </div>
 
       <div id="log-register">
