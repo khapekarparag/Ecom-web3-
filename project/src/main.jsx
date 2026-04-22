@@ -10,6 +10,7 @@ import AddProdInCartContextProvider from './context/AddProdInCartContextProvider
 import SearchContextProvider from './context/SearchContextProvider.jsx'
 import ThemeContextProvider from './context/ThemeContextProvider.jsx'
 import UpdateProdContextProvider from './context/UpdateProdContextProvider.jsx'
+import PerProdValContextProvider from './context/PerProdValContextProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
     <AdminContextProvider>
@@ -19,9 +20,11 @@ createRoot(document.getElementById('root')).render(
                     <SearchContextProvider>
                         <ThemeContextProvider>
                             <UpdateProdContextProvider>
-                                 <BrowserRouter>
-                                    <App/>
-                                </BrowserRouter>
+                                <PerProdValContextProvider>
+                                     <BrowserRouter>
+                                            <App/>
+                                    </BrowserRouter>
+                                </PerProdValContextProvider>
                             </UpdateProdContextProvider>
                         </ThemeContextProvider>
                     </SearchContextProvider>

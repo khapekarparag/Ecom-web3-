@@ -7,10 +7,8 @@ import { AddProdInCartContext } from '../context/AddProdInCartContextProvider'
 import { SearchContext } from '../context/SearchContextProvider'
 import { ThemeContext } from '../context/ThemeContextProvider'
 
-
-
 export default function Showproducts() {
-    let [prod, setProd ] = useState([]) 
+    let [prod, setProd ] = useState([])  
     let {cartval, setCartval} = useContext(CartProdValueContext)
     let {cartProd, setCartProd} = useContext(AddProdInCartContext)
     let {search, setSearch} = useContext(SearchContext)
@@ -41,20 +39,25 @@ export default function Showproducts() {
 
     function handleCart(product){
         let exist = false
-            for(let i=0;i<=cartProd.length-1;i++){
-                if(cartProd[i].id == product.id ){
-                    exist = true
-                    break
-                }
-            }
-            if(!exist){
-                setCartProd((prev)=>
-                [...prev,product])
 
+        let updateCart = cartProd.map((el)=>{
+            if(el.id == product.id){
+                exist =true
+                return {...el,quantity : el.quantity +1 }
             }
-            setCartval(function(prev){
-                return prev+1
+            return el
+        })
+        if(!exist){
+            setCartProd((prev)=>{
+                return[...prev,{...product, quantity:1}]
             })
+        }
+        else{
+            setCartProd(updateCart)
+        }
+        setCartval((prev)=>{
+            return prev + 1       
+        })
     }
 
     async function handleAllProduct(){
